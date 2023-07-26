@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/pegawai', PegawaiController::class);
+Route::post('/pegawai', [PegawaiController::class, 'store']);
+Route::get('/datadiri', function () {
+    return view('datadiri');
+});

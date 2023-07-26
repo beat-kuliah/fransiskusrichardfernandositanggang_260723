@@ -38,8 +38,9 @@ class PegawaiController extends Controller
         $pegawai->pegawai_nama = $request->pegawai_nama;
         $pegawai->pegawai_jabatan = $request->pegawai_jabatan;
         $pegawai->pegawai_umur = $request->pegawai_umur;
-        $pegawai_pegawai_alamat = $request->pegawai_alamat;
+        $pegawai->pegawai_alamat = $request->pegawai_alamat;
         $pegawai->save();
+        return redirect('/pegawai');
     }
 
     /**

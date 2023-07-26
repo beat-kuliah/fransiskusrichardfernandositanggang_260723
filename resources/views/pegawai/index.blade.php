@@ -27,14 +27,18 @@
         <th>Jabatan</th>
         <th>Umur</th>
         <th>Alamat</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     @foreach ($pegawai as $p)
     <tr>
-        <td>$p->pegawai_id</td>
-        <td>$p->pegawai_nama</td>
-        <td>$p->pegawai_jabatan</td>
-        <td>$p->pegawai_umur</td>
-        <td>$p->pegawai_alamat</td>
+        <td>{{ $p->pegawai_id }}</td>
+        <td>{{ $p->pegawai_nama }}</td>
+        <td>{{ $p->pegawai_jabatan }}</td>
+        <td>{{ $p->pegawai_umur }}</td>
+        <td>{{ $p->pegawai_alamat }}</td>
+        <td><button onclick="edit()">Edit</button></td>
+        <td><button onclick="delete({{$p->pegawai_id}})">Delete</button></td>
     </tr>
     @endforeach
 </table>
@@ -43,6 +47,10 @@
 
 @section('script')
 <script>
+    function edit() {
+        alert('comming soon');
+    }
+
     function tambahData() {
         window.location.href = '/pegawai/create'
     }
