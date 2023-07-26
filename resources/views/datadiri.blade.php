@@ -56,9 +56,10 @@
 @endsection
 
 @section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
     function tampil() {
-        var alldata = $('#form').formSerialize();
+        var alldata = $('#form').Serialize();
         console.log(alldata);
         alert(alldata);
     }
